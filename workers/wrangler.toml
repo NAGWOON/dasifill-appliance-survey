@@ -1,0 +1,12 @@
+# wrangler.toml — workers 폴더에서 `npx wrangler deploy` 실행
+name = "dasifill-quest-proxy"
+main = "send-quest-proxy.mjs"
+compatibility_date = "2024-10-01"
+
+# 배포 후 Cloudflare 대시보드에서 시크릿 설정:
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_CHAT_ID
+#   wrangler secret put QUEST_API_KEY
+#
+# QUEST_API_KEY 값은 appliance-quest.html → PROJECT_CONFIG.telegramProxyKey 와 동일하게 설정
+# 배포 완료 후 나오는 Worker URL 을 telegramProxyUrl 에 입력

@@ -113,6 +113,28 @@ body{background:var(--bg);color:var(--tx);font-family:'Noto Sans KR',sans-serif;
   .pw-visual{display:flex;}
   .pw-center{flex:0 0 48%;}
 }
+/* 모바일: 사진을 풀스크린 배경으로 */
+@media(max-width:899px){
+  .pw-split{position:relative;}
+  .pw-visual{
+    display:block;
+    position:absolute;
+    inset:0;
+    z-index:0;
+    flex:none;
+    padding:0;
+    border:none;
+  }
+  .pw-visual::before{
+    background:rgba(8,8,12,.72);
+  }
+  .pw-center{
+    background:transparent;
+    position:relative;
+    z-index:1;
+    padding:80px 28px 80px;
+  }
+}
 
 /* 상단 네비 바 */
 .pw-topbar{
